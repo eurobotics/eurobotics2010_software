@@ -1,0 +1,30 @@
+function [p_ref p_out v a vmot] = pid_distance(acc,vel,dis)
+
+coef_d = 833391.208;    % pulsos/m
+coef_v = 4166.956;      % (pulsos/Ts)/(m/s)
+coef_a = 20.835;        % (pulsos/Ts^2)/(m/s^2)    
+T_show = 0.1;
+
+s1 = serial('COM12', 'Baudrate', 115200, );
+fopen(s1);
+
+% set aceleration and speed maximus
+fprintf(s1, ['quadramp distance ',...
+    num2str(uint32(acc*coef_a)),' ',num2str(uint32(acc*coef_a)),' '...
+    num2str(uint32(vel*coef_v)),' ',num2str(uint32(vel*coef_v))]);
+
+% set consign of distance
+fprintf(s1, ['consing distance ', num2str(int32(dis*coef_d))]);
+
+% flush input
+flushinput(s1);
+
+% wait
+fprintf(
+
+%for i = 1:time/ts
+pause(ts);
+[cons fcons err out] = fscanf(s1, 'angle cons=	%ld	fcons=	%ld	err= %ld in= %ld out= %ld');
+%end
+
+fclose(s1);

@@ -1,0 +1,19 @@
+pid_show(com, time, ts, cs_name)
+
+com = 'COM12';
+time = 2;
+ts = 0.1;
+cs_name = 'angle';
+
+s1 = serial(com, 'Baudrate', 115200);
+fopen(s1);
+
+fprintf(s1, ['cs_status ', cs_name, ' loop_show']);
+
+
+%for i = 1:time/ts
+pause(ts);
+[cons fcons err out] = fscanf(s1, 'angle cons=	%ld	fcons=	%ld	err= %ld in= %ld out= %ld');
+%end
+
+fclose(s1);
