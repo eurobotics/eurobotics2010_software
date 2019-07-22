@@ -3,7 +3,7 @@
 Trompetero was made for Eurobot 2010, theme *Feed the world*. 
 
 <p align="center">
-<img src="http://arc-robots.org/wp/wp-content/uploads/2014/11/40.jpg"
+<img src="http://arc-robots.org/wp-content/uploads/2014/11/40.jpg"
 width=500> 
 </p>
 
@@ -13,12 +13,12 @@ Check out more photos and videos of our robots at our [web page](http://arc-robo
 
 # Author
 
-* Javier Baliñas Santos
+* Javier BaliÃ±as Santos
 
 # Copyright
 
 ![Eurobotics Engineering](./docs/logos/logo_eurobotics_eng.png)
-![Asociación de Robótica de Coslada (ARC)](./docs/logos/logo_arc.png)
+![AsociaciÃ³n de RobÃ³tica de Coslada (ARC)](./docs/logos/logo_arc.png)
 
 # License
 
